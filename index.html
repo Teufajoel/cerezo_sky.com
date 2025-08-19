@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CEREZO SKY - Art et Peinture. Promouvoir la culture asiatique à travers l'art. Découvrez nos œuvres, nos valeurs et contactez-nous.">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                background: #fff;
+                color: #003366;
+            }
+            .nav__logo, .footer__title {
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: bold;
+                color: #003366;
+                letter-spacing: 2px;
+            }
+            .home__title-color {
+                color: #0074d9;
+            }
+            .slogan {
+                font-size: 1.5rem;
+                color: #0074d9;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                margin-top: 0.5em;
+                margin-bottom: 1em;
+                display: block;
+            }
+            .valeurs {
+                margin: 1em 0;
+                font-size: 1.1em;
+                color: #003366;
+                font-weight: bold;
+            }
+            .about__subtitle {
+                color: #003366;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .nav__logo {
+                font-size: 2rem;
+            }
+            .footer {
+                background: #003366;
+                color: #fff;
+            }
+            .footer__title {
+                color: #fff;
+            }
+            .button {
+                background: #0074d9;
+                color: #fff;
+                border-radius: 2em;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .section-title {
+                color: #003366;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" type="images/png" href="img/logo.jpg">
+    <title>CEREZO SKY - Art et Peinture</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid" aria-label="Menu principal">
+                <div>
+                    <a href="#home" class="nav__logo" title="CEREZO SKY - Art et Peinture">
+                        <img src="assets/img/logo.png" alt="Logo CEREZO SKY" style="height:2.2em;vertical-align:middle;margin-right:0.5em;display:inline-block;">
+                        
+                    </a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Accueil</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Compétences</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Réalisations</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item nav__lang">
+                            <a href="#" id="lang-fr" class="nav__link nav__lang-link active" aria-label="Français">FR</a> |
+                            <a href="#" id="lang-en" class="nav__link nav__lang-link" aria-label="English">EN</a>
+                        </li>
+                    </ul>
+                </div>
+        <script>
+        // Language switcher dynamique FR/EN
+        document.addEventListener('DOMContentLoaded', function() {
+            const frBtn = document.getElementById('lang-fr');
+            const enBtn = document.getElementById('lang-en');
+            const translations = {
+                fr: {
+                    nav: ["Accueil", "À propos", "Compétences", "Réalisations", "Contact"],
+                    homeTitle: "<br><span class=\"home__title-color\">CEREZO SKY</span><br> Arts&Peinture",
+                    contactBtn: "Contact",
+                    aboutTitle: "À propos",
+                    aboutSubtitle: "CEREZO SKY",
+                    aboutText: "CEREZO SKY est une entreprise artistique spécialisée dans la création, l’exposition et la vente d’œuvres uniques alliant inspiration asiatique et modernité.Installée à Palawan, aux Philippines 🇵🇭, notre société s’inspire de la richesse culturelle locale et de la beauté naturelle de l’archipel pour donner vie à des créations authentiques et intemporelles.",
+                    skillsTitle: "Compétences",
+                    skillsSubtitle: "Compétences professionnelles",
+                    skillsText: "Œuvres originales : peintures et créations artistiques uniques.Conceptions personnalisées : réalisation de toiles sur commande selon vos envies.Projets artistiques : collaborations pour expositions, galeries et décorations d’espaces.",
+                    workTitle: "Réalisations",
+                    workAlts: ["Projet 1", "Projet 2", "Projet 3", "Projet 4", "Projet 5", "Projet 6"],
+                    contactTitle: "Contact",
+                    contactLabels: ["Nom", "Email", "Votre message", "Envoyer"],
+                    footerCopy: "&#169; EmmanuelDev. Tous droits réservés"
+                },
+                en: {
+                    nav: ["Home", "About", "Skills", "Work", "Contact"],
+                    homeTitle: "Hi,<br>Welcome to <span class=\"home__title-color\">CEREZO SKY</span><br> Arts&Painting",
+                    contactBtn: "Contact",
+                    aboutTitle: "About",
+                    aboutSubtitle: "CEREZO SKY",
+                    aboutText: "CEREZO SKY is an artistic company specializing in the creation, exhibition, and sale of unique works that blend Asian inspiration with modernity. Based in Palawan, Philippines 🇵🇭, our company draws from the local cultural richness and the natural beauty of the archipelago to bring authentic and timeless creations to life.",
+                    skillsTitle: "Skills",
+                    skillsSubtitle: "Professional Skills",
+                    skillsText: "Original works: unique paintings and artistic creations.Custom designs: custom canvases made to your specifications.Artistic projects: collaborations for exhibitions, galleries, and space decorations.",
+                    workTitle: "Work",
+                    workAlts: ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5", "Project 6"],
+                    contactTitle: "Contact",
+                    contactLabels: ["Name", "Email", "Your message", "Send"],
+                    footerCopy: "&#169; EmmanuelDev. All rights reserved"
+                }
+            };
+
+            function setLang(lang) {
+                // Menu
+                const navLinks = document.querySelectorAll('.nav__list .nav__item:not(.nav__lang) .nav__link');
+                navLinks.forEach((el, i) => { el.textContent = translations[lang].nav[i]; });
+                // Home title
+                document.querySelector('.home__title').innerHTML = translations[lang].homeTitle;
+                // Home button
+                document.querySelector('.home__data .button').textContent = translations[lang].contactBtn;
+                // About
+                document.querySelector('#about .section-title').textContent = translations[lang].aboutTitle;
+                document.querySelector('.about__subtitle').textContent = translations[lang].aboutSubtitle;
+                document.querySelector('.about__text').textContent = translations[lang].aboutText;
+                // Skills
+                document.querySelector('#skills .section-title').textContent = translations[lang].skillsTitle;
+                document.querySelector('.skills__subtitle').textContent = translations[lang].skillsSubtitle;
+                document.querySelector('.skills__text').textContent = translations[lang].skillsText;
+                // Work
+                document.querySelector('#work .section-title').textContent = translations[lang].workTitle;
+                document.querySelectorAll('.work__img img').forEach((img, i) => {
+                    img.alt = translations[lang].workAlts[i] || '';
+                });
+                // Contact
+                document.querySelector('#contact .section-title').textContent = translations[lang].contactTitle;
+                document.getElementById('name').placeholder = translations[lang].contactLabels[0];
+                document.getElementById('email').placeholder = translations[lang].contactLabels[1];
+                document.getElementById('message').placeholder = translations[lang].contactLabels[2];
+                document.querySelector('.contact__button').textContent = translations[lang].contactLabels[3];
+                // Footer
+                document.querySelector('.footer__copy').innerHTML = translations[lang].footerCopy;
+                // Active link
+                if(lang === 'fr') {
+                    frBtn.classList.add('active');
+                    enBtn.classList.remove('active');
+                    document.documentElement.lang = 'fr';
+                } else {
+                    enBtn.classList.add('active');
+                    frBtn.classList.remove('active');
+                    document.documentElement.lang = 'en';
+                }
+            }
+
+            frBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                setLang('fr');
+            });
+            enBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                setLang('en');
+            });
+
+            // Détection auto via URL (?lang=en)
+            if(window.location.search.includes('lang=en')) {
+                setLang('en');
+            } else {
+                setLang('fr');
+            }
+        });
+        </script>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Bienvenue chez <span class="home__title-color">CEREZO SKY</span><br><span style="font-size:1.2rem;">Art & Peinture</span></h1>
+                    <span class="slogan">Alway Dream sky</span>
+                    <p style="margin-bottom:1em;"> Promouvoir<b> la culture asiatique</b> à travers l'art et la peinture.</p>
+                    <a href="#contact" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="#about" class="home__social-icon" aria-label="Découvrir"><i class='bx bx-palette'></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="60" y="100"  href="assets/img/cher.png" alt="Logo typographique CEREZO SKY" loading="lazy"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">À propos de CEREZO SKY</h2>
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/logo.png" alt="Art asiatique CEREZO SKY" loading="lazy">
+                    </div>
+                    <div>
+                        <h2 class="about__subtitle">Notre mission</h2>
+                        <p class="about__text">CEREZO SKY est une entreprise dédiée à l'art et à la peinture, avec pour vocation de <b>promouvoir la culture asiatique</b> auprès de tous, dès 3 ans. Nous croyons en la <b>diversité</b>, le <b>leadership</b> et l'<b>intégrité</b>.<br><br>À travers nos œuvres, nous invitons chacun à rêver et à s'inspirer du ciel, symbole d'ouverture et d'infini.</p>
+                        <div class="valeurs">Valeurs : Diversité • Leadership • Intégrité <br> 
+                        <strong>Pour toute demande d'information, veuillez nous contacter via  <a href="https://wa.me/+639853200943"><i class='bx bxl-whatsapp' ></i>Whatsapp</a>
+                        </strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Notre identité visuelle</h2>
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">l'Arts et la peinture</h2>
+                        <p class="skills__text">ven, bleu et blanc, pour refléter la pureté et la profondeur du ciel. Il est utilisé sur tous nos supports : site web, réseaux sociaux, cartes de visite, vêtements.</p>
+                        <div class="valeurs">Chez CEREZO SKY, nous croyons que l’art est un langage universel capable d’unir les cultures et de transmettre l’émotion. </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <span class="skills__name">Chaque création est pensée comme une invitation au voyage et à la contemplation.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>              
+                        <img src="assets/img/ches.jpg" alt="Exemple d'œuvre CEREZO SKY" class="skills__img" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Nos œuvres</h2>
+                <div class="work__container bd-grid">
+                    <a href="#" class="work__img">
+                        <img src="assets/img/1.jpg" alt="Peinture asiatique 1" loading="lazy">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/2.jpg" alt="Peinture asiatique 2" loading="lazy">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/3.jpg" alt="Peinture asiatique 3" loading="lazy">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/4.jpg" alt="Peinture asiatique 4" loading="lazy">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/4.jpg" alt="Peinture asiatique 5" loading="lazy">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/4.jpg" alt="Peinture asiatique 6" loading="lazy">
+                    </a>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact__container bd-grid">
+                    <form action="#" class="contact__form">
+                        <label for="name" class="visually-hidden">Nom</label>
+                        <input type="text" id="name" name="name" placeholder="Nom" class="contact__input" required>
+                        <label for="email" class="visually-hidden">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" class="contact__input" required>
+                        <label for="message" class="visually-hidden">Message</label>
+                        <textarea id="message" name="message" cols="0" rows="10" class="contact__input" placeholder="Votre message" required></textarea>
+                        <button type="submit" class="contact__button button">Envoyer</button>
+                    </form>
+                    <div style="margin-top:1em; color:#003366; font-size:0.95em;">🎨 Une œuvre vous inspire ? Écrivez-nous.
+L’équipe CEREZO SKY est à votre écoute pour concrétiser vos projets artistiques !</div>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">CEREZO SKY</p>
+            <span class="slogan">Alway Dream sky</span>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/jay.deep.758737" class="footer__icon" aria-label="Facebook"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon" aria-label="Instagram"><i class='bx bxl-instagram' ></i></a>
+                <a  href="https://wa.me/+639853200943?text= besoinn de savoir plus svp" class="footer__icon" aria-label="Whatsapp"><i class='bx bxl-whatsapp' ></i></a>
+            </div>
+            <p class="footer__copy">&#169; CEREZO SKY. Tous droits réservés. Art & Peinture - Promouvoir la culture asiatique.</p>
+        </footer>
+        <!-- Style pour accessibilité (labels cachés) -->
+        <style>
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+        </style>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
